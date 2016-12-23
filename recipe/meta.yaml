@@ -1,7 +1,7 @@
 {% set gh_org = "lgpage" %}
 {% set gh_repo = "nbtutor" %}
 {% set version = "1.0.4" %}
-{% set sha256 = "8a6bc51ede85156d38f802849fec255531e545b74f8131980cdb5723cd9cfb88" %}
+{% set sha256 = "64d8f3ecccd77b16086710cd2dac8f2c0c1aef77916862770b7e948af9e05716" %}
 
 package:
   name: {{ gh_repo|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
