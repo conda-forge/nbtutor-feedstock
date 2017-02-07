@@ -36,6 +36,9 @@ test:
     - python
     - requests
 
+  source_files:
+    - '*'
+
   imports:
     - nbtutor
 
