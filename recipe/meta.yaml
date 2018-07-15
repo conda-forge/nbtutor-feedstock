@@ -15,10 +15,12 @@ source:
     - jsplumb.patch
 
 build:
-  number: 3
+  noarch: python
+  number: 4
 
 requirements:
-  build:
+  host:
+    - pip
     - nodejs
     - notebook >=4.2.0
     - python
