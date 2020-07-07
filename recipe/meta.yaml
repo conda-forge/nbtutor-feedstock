@@ -15,7 +15,7 @@ source:
     - jsplumb.patch
 
 build:
-  number: 1003
+  number: 1004
 
 requirements:
   build:
