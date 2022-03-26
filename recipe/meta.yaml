@@ -1,7 +1,7 @@
 {% set gh_org = "lgpage" %}
 {% set gh_repo = "nbtutor" %}
-{% set version = "1.0.4" %}
-{% set sha256 = "64d8f3ecccd77b16086710cd2dac8f2c0c1aef77916862770b7e948af9e05716" %}
+{% set version = "2.0.1" %}
+{% set sha256 = "f5a3e385bb5afc524efdb3a12f5c8158145a226b7b172be8fb37e93f252534be" %}
 
 package:
   name: {{ gh_repo|lower }}
@@ -15,7 +15,7 @@ source:
     - jsplumb.patch
 
 build:
-  number: 1007
+  number: 0
 
 requirements:
   host:
