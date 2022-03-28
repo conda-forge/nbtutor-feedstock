@@ -1,55 +1,46 @@
-{% set gh_org = "lgpage" %}
-{% set gh_repo = "nbtutor" %}
-{% set version = "1.0.4" %}
-{% set sha256 = "64d8f3ecccd77b16086710cd2dac8f2c0c1aef77916862770b7e948af9e05716" %}
+{% set name = "nbtutor" %}
+{% set version = "2.0.1" %}
+{% set sha256 = "ab3344ca7e2ae557417e477b5ff8f5a1f4f4af65949cb789e67c091aead4869a" %}
 
 package:
-  name: {{ gh_repo|lower }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ gh_repo }}-{{ version }}.tar.gz
-  url: https://github.com/{{ gh_org }}/{{ gh_repo }}/archive/{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - jsplumb.patch
 
 build:
-  number: 1007
+  number: 0
+  noarch: python
 
 requirements:
   host:
-    - nodejs
-    - notebook >=4.2.0
-    - python
-    - setuptools
+    - python >=3.6
+    - notebook
+    - pip
 
   run:
-    - notebook >=4.2.0
-    - python
+    - python >=3.6
+    - notebook
 
 test:
-  requires:
-    - coverage
-    - nodejs
-    - notebook >=4.2.0
-    - pytest
-    - pytest-cov
-    - python
-    - requests
-
-  source_files:
-    - '*'
-
   imports:
     - nbtutor
 
+  requires:
+    - pip
+
+  commands:
+    - pip check
+
 about:
-  home: https://github.com/{{ gh_org }}/{{ gh_repo }}
+  home: https://github.com/lgpage/nbtutor
+  summary: Visualize Python code execution in Jupyter Notebook cells
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENCE.rst
-  summary: Visualize Python code execution in Jupyter Notebook cells
+  license_file: LICENCE.md
+  dev_url: https://github.com/lgpage/nbtutor
 
 extra:
   recipe-maintainers:
