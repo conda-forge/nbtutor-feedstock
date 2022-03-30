@@ -1,6 +1,6 @@
 {% set name = "nbtutor" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "ab3344ca7e2ae557417e477b5ff8f5a1f4f4af65949cb789e67c091aead4869a" %}
+{% set version = "2.0.2" %}
+{% set sha256 = "fc234bd241c3e3d5560b5379d790fe53181e6ad7f3e706b0cb7f46449381bdf1" %}
 
 package:
   name: {{ name|lower }}
